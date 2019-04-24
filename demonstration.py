@@ -26,6 +26,8 @@ def setup():
     GPIO.setwarnings(False)
     #set the gpio modes to BCM numbering
     GPIO.setmode(GPIO.BCM)
+    #set DHTPIN
+    GPIO.setup(DHTPIN,GPIO.OUT)
     #set LEDPIN's mode to output,and initial level to LOW(0V)
     GPIO.setup(LEDPINGREEN,GPIO.OUT,initial=GPIO.LOW)
     GPIO.setup(LEDPINYELLOW,GPIO.OUT,initial=GPIO.LOW)
@@ -165,6 +167,7 @@ def destroy():
     GPIO.cleanup()
 
 if __name__ == '__main__':
+    setup()
     try:
         main()
     except KeyboardInterrupt:
