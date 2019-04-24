@@ -139,7 +139,7 @@ def main():
                 GPIO.output(LEDPINGREEN,GPIO.LOW)
                 print('GREEN LED OFF...\n')
                 time.sleep(0.5)
-            else if heat_index < 80 && heat_index >= 75:
+            elif heat_index < 80 && heat_index >= 75:
                 GPIO.output(LEDPINYELLOW,GPIO.HIGH)
                 print('...YELLOW LED ON\n')
                 time.sleep(0.5)
@@ -147,7 +147,7 @@ def main():
                 GPIO.output(LEDPINYELLOW,GPIO.LOW)
                 print('YELLOW LED OFF...\n')
                 time.sleep(0.5)
-            else if heat_index >= 80:
+            elif heat_index >= 80:
                 GPIO.output(LEDPINRED,GPIO.HIGH)
                 print('...RED LED ON\n')
                 time.sleep(0.5)
