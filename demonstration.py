@@ -133,30 +133,30 @@ def main():
         if result:
             humidity, temperature, heat_index = result
             print "humidity: %s %%,  Temperature: %s C, Heat index: %s" % (humidity, temperature,heat_index)
-            if heat_index < 75:
+            if heat_index < 77:
                 GPIO.output(LEDPINGREEN,GPIO.HIGH)
                 print('...GREEN LED ON\n')
-                time.sleep(0.5)
+                time.sleep(1)
                
                 GPIO.output(LEDPINGREEN,GPIO.LOW)
                 print('GREEN LED OFF...\n')
-                time.sleep(0.5)
-            elif heat_index < 80 and heat_index >= 75:
+                time.sleep(1)
+            elif heat_index < 80 and heat_index >= 78:
                 GPIO.output(LEDPINYELLOW,GPIO.HIGH)
                 print('...YELLOW LED ON\n')
-                time.sleep(0.5)
+                time.sleep(1)
                
                 GPIO.output(LEDPINYELLOW,GPIO.LOW)
                 print('YELLOW LED OFF...\n')
-                time.sleep(0.5)
-            elif heat_index >= 80:
+                time.sleep(1)
+            elif heat_index >= 84:
                 GPIO.output(LEDPINRED,GPIO.HIGH)
                 print('...RED LED ON\n')
-                time.sleep(0.5)
+                time.sleep(1)
                
                 GPIO.output(LEDPINRED,GPIO.LOW)
                 print('RED LED OFF...\n')
-                time.sleep(0.5)
+                time.sleep(1)
         time.sleep(1)
 
 def destroy():
