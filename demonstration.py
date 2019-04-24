@@ -133,7 +133,7 @@ def main():
         if result:
             humidity, temperature, heat_index = result
             print "humidity: %s %%,  Temperature: %s C, Heat index: %s" % (humidity, temperature,heat_index)
-            if heat_index < 77:
+            if heat_index < 78:
                 GPIO.output(LEDPINGREEN,GPIO.HIGH)
                 print('...GREEN LED ON\n')
                 time.sleep(1)
